@@ -1,0 +1,22 @@
+package edu.icet.ecom.Entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+@Entity
+@Table(name = "admin")
+
+public class AdminEntity {
+
+    private Long adminId;
+    private String adminEmail;
+    private String password;
+    private String size;
+}
