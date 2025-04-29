@@ -6,5 +6,6 @@ public interface AdminService {
 
     AdminDto add (AdminDto adminDto);
 
+    AdminDto login(String email,String password);
 
 }

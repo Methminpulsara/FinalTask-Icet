@@ -1,7 +1,6 @@
 package edu.icet.ecom.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,8 +14,10 @@ import lombok.NoArgsConstructor;
 
 public class AdminEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long adminId;
-    private String adminEmail;
+    private String email;
     private String password;
     private String size;
 }
