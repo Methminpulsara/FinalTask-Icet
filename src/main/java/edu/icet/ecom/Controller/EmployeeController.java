@@ -18,6 +18,7 @@ public class EmployeeController {
 
     @PostMapping("/add")
     public Employee add(@RequestBody Employee employee){
+        employee.setEmployeeId(null);
         return service.save(employee);
     }
     @PutMapping("/update/{id}")

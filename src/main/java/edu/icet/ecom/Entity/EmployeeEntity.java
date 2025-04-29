@@ -1,9 +1,6 @@
 package edu.icet.ecom.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,10 +18,19 @@ public class EmployeeEntity {
     @GeneratedValue
     private Long employeeId;
 
+    @Column(nullable = false , length = 100)
     private String name;
+
+    @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private String department;
+
+    @Column(nullable = false)
     private String createdDate;
+
+    @Column(nullable = false)
     private String modifiedDate;
 
 }

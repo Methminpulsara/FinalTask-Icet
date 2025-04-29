@@ -42,9 +42,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         EmployeeEntity  updatedEmployeeEntity= repository.findById(employeeId)
                 .orElseThrow(()-> new RuntimeException("Employee not found after update"));
-
         return mapper.map(updatedEmployeeEntity,Employee.class);
-
     }
 
     @Override

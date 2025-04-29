@@ -18,6 +18,7 @@ public class AdminController {
 
     @PostMapping("/add")
     public AdminDto add (@RequestBody AdminDto adminDto){
+        adminDto.setAdminId(null);
         return service.add(adminDto);
     }
 
